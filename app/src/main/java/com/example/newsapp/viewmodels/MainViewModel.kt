@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
-class MainViewModel(private val repository: MainRepository) : ViewModel() {
+class  MainViewModel(private val repository: MainRepository) : ViewModel() {
     private val _newsArticles = MutableLiveData<UiState>(UiState.Loading)
     val newsArticles: LiveData<UiState>
         get() = _newsArticles

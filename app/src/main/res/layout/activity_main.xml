@@ -4,50 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     android:padding="5dp"
-    android:background="@color/cardview_light_background"
     tools:context=".MainActivity">
 
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:visibility="gone"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toTopOf="@id/rvNewsArticles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
 
     <Button
         android:id="@+id/btNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="5dp"
         android:text="@string/new_to_old"
         android:textAllCaps="false"
-        />
+        android:textColorLink="#00a99d"
+        app:layout_constraintEnd_toStartOf="@id/btOld"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btOld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toEndOf="@id/btNew"
-        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5dp"
         android:text="@string/old_to_new"
         android:textAllCaps="false"
-        android:layout_marginStart="10dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNewsArticles"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btNew"
         android:layout_marginTop="10dp"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btNew" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

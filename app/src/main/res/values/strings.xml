@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">NewsApp</string>
+    <string name="app_name">Khabars</string>
     <string name="new_to_old">New to Old</string>
     <string name="old_to_new">Old to New</string>
     <string-array name="filter_options">
